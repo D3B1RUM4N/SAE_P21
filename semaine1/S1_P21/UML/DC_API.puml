@@ -11,15 +11,18 @@ package java.lang
     class Class
     {
         toString() : String
-        getConstructors() : Constructor[*]
+        getDeclaredConstructors() : Constructor[*]
         forName(String className) : static Class<?>
         getCanonicalName() : String
+        getDeclaredField() : Field
+        getName() : String
+        '   contien le package en plus
     }
 
     class Object
     {
         toString() : String
-        getClass() : Class
+        getDeclaredClass() : Class
     }
 
     class String
