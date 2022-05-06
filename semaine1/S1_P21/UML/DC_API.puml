@@ -1,7 +1,39 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-abstract class AbstractList
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+
+package java.lang
+{
+    class Class
+    {
+        toString() : String
+        getConstructors() : Constructor[*]
+        forName(String className) : static Class<?>
+        getCanonicalName() : String
+    }
+
+    class Object
+    {
+        toString() : String
+        getClass() : Class
+    }
+
+    class String
+    {
+        compareTo() : Integer
+        contains() : boolean
+        endWith() : boolean
+        length() : Integer
+        split() : String[]
+        toString() : String
+    }
+}
+
+/'abstract class AbstractList
 abstract AbstractCollection
 interface List
 interface Collection
@@ -22,6 +54,6 @@ enum TimeUnit {
 DAYS
 HOURS
 MINUTES
-}
+}'/
 
 @enduml
