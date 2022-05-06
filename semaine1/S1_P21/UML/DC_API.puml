@@ -8,6 +8,12 @@ hide empty members
 
 package java.lang
 {
+    class Object
+    {
+        toString() : String
+        getDeclaredClass() : Class
+    }
+
     class Class
     {
         toString() : String
@@ -17,12 +23,7 @@ package java.lang
         getDeclaredField() : Field
         getName() : String
         '   contien le package en plus
-    }
 
-    class Object
-    {
-        toString() : String
-        getDeclaredClass() : Class
     }
 
     class String
@@ -34,7 +35,49 @@ package java.lang
         split() : String[]
         toString() : String
     }
+
+    class Enum
+    {
+        compareTo() : boolean
+        getDeclaringClass() : Classe<e>
+        name() : String
+    }
+
+    package reflect
+    {
+        class Member
+        {
+            getName() : String
+            getDeclaringClass() : Class<?>
+        }
+
+        class AccessibleObject
+        {
+            'getAnnotations() : Annotation[*]
+            'getDeclaredAnnotations() : Annotation[*]
+        }
+
+        class Executable
+        {
+            'getDeclaredAnnotations() : Annotation[*]
+        }
+
+        class Constructor
+        {
+            getModifiers() : Integer
+            getName() : String
+            gerParameterTypes() : Class<?>[]
+        }
+    }
 }
+
+Class --|> Object
+String --|> Object
+Enum -|> Object
+
+AccessibleObject -|> Object
+Executable -|> AccessibleObject
+Constructor -|> Executable
 
 /'abstract class AbstractList
 abstract AbstractCollection
