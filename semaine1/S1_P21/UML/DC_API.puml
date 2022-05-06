@@ -10,27 +10,29 @@ package java.lang
 {
     class Object
     {
+        getClass() : Class<?>
         toString() : String
-        getDeclaredClass() : Class
     }
 
     class Class
     {
         toString() : String
         getDeclaredConstructors() : Constructor[*]
-        forName(String className) : static Class<?>
+        forName(String className) : {static} Class<?>
         getCanonicalName() : String
         getDeclaredField() : Field
         getName() : String
         '   contien le package en plus
+        getDeclaredClass() : Class
+        getModifiers() : Integer
 
     }
 
     class String
     {
         compareTo() : Integer
-        contains() : boolean
-        endWith() : boolean
+        contains() : Boolean
+        endWith() : Boolean
         length() : Integer
         split() : String[]
         toString() : String
@@ -38,17 +40,18 @@ package java.lang
 
     class Enum
     {
-        compareTo() : boolean
+        compareTo() : Boolean
         getDeclaringClass() : Classe<e>
         name() : String
     }
 
     package reflect
     {
-        class Member
+        Interface Member
         {
             getName() : String
             getDeclaringClass() : Class<?>
+            getModifiers() : Interger
         }
 
         class AccessibleObject
@@ -57,16 +60,29 @@ package java.lang
             'getDeclaredAnnotations() : Annotation[*]
         }
 
-        class Executable
+        class Executable implements Member
         {
             'getDeclaredAnnotations() : Annotation[*]
         }
 
-        class Constructor
+        class Constructor implements Member
         {
             getModifiers() : Integer
             getName() : String
             gerParameterTypes() : Class<?>[]
+        }
+
+        class Field implements Member
+        {
+            getModifiers() : Integer
+            getName() : String
+            toString() : String
+        }
+
+        class Method implements Member
+        {
+            getModifiers() : Integer
+            getName() : String
         }
     }
 }
@@ -75,8 +91,9 @@ Class --|> Object
 String --|> Object
 Enum -|> Object
 
-AccessibleObject -|> Object
+AccessibleObject --|> Object
 Executable -|> AccessibleObject
+Field --|> AccessibleObject
 Constructor -|> Executable
 
 /'abstract class AbstractList
