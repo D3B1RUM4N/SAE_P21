@@ -24,5 +24,8 @@ public class Test2 {
             e.printStackTrace();
         }
         //resultat etrange
+        //utiliser static Class.forName(nomClass)
+        //class pass JAVA
+        // ./
     }
 }
