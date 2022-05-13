@@ -1,0 +1,10 @@
+null@startuml
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+
+class semaineDeux{
+[Ljava.lang.reflect.Field;@677327b6
+}
+@enduml
