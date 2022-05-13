@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="247px" preserveAspectRatio="none" style="width:155px;height:247px;background:#FFFFFF;" version="1.1" viewBox="0 0 155 247" width="155px" zoomAndPan="magnify"><defs/><g><!--MD5=[07d107d807566132806467f37a13686b]
+cluster p21.td1--><polygon fill="#FFFFFF" points="16,6,76,6,83,28.4883,138,28.4883,138,240,16,240,16,6" style="stroke:#000000;stroke-width:1.5;"/><line style="stroke:#000000;stroke-width:1.5;" x1="16" x2="83" y1="28.4883" y2="28.4883"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="54" x="20" y="21.5352">p21.td1</text><!--MD5=[79a24226133ceec5e67a75883b4e1d26]
+class p21.td1.Year--><rect codeLine="8" fill="#FEFECE" height="182.6387" id="p21.td1.Year" style="stroke:#A80036;stroke-width:1.5;" width="89" x="32.5" y="41"/><text fill="#000000" font-family="sans-serif" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="27" x="63.5" y="57.6016">Year</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33.5" x2="120.5" y1="65.1328" y2="65.1328"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="61" x="38.5" y="79.7676">MIN_VALUE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="65" x="38.5" y="92.7227">MAX_VALUE</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="23" x="38.5" y="105.6777">year</text><line style="stroke:#A80036;stroke-width:1.5;" x1="33.5" x2="120.5" y1="111.998" y2="111.998"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="77" x="38.5" y="126.6328">p21.td1.Year()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="38.5" y="139.5879">length()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="51" x="38.5" y="152.543">toString()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="54" x="38.5" y="165.498">getValue()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="19" x="38.5" y="178.4531">of()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="38.5" y="191.4082">isLeap()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="42" x="38.5" y="204.3633">isLeap()</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="44" x="38.5" y="217.3184">isAfter()</text><!--MD5=[41ce21faecc004b13ffdfc55ac838ad8]
+@startuml
+'https://plantuml.com/class-diagram
+'version s2
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+skinparam style strictuml
+hide empty members
+
+class p21.td1.Year
+{
+  MIN_VALUE
+  MAX_VALUE
+  year
+  p21.td1.Year()
+  length()
+  toString()
+  getValue()
+  of()
+  isLeap()
+  isLeap()
+  isAfter()
+}
+
+@enduml
+
+@startuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+skinparam style strictuml
+hide empty members
+
+class p21.td1.Year
+{
+  MIN_VALUE
+  MAX_VALUE
+  year
+  p21.td1.Year()
+  length()
+  toString()
+  getValue()
+  of()
+  isLeap()
+  isLeap()
+  isAfter()
+}
+
+@enduml
+
+PlantUML version 1.2022.0(Tue Jan 11 17:16:42 CET 2022)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: fr
+Country: FR
+--></g></svg>
