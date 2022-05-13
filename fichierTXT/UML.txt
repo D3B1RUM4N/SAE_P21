@@ -1,0 +1,122 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+
+package java.lang
+{
+    class Object
+    {
+        getClass() : Class<?>
+        toString() : String
+    }
+
+    class Class
+    {
+        toString() : String
+        getDeclaredConstructors() : Constructor[*]
+        forName(String className) : {static} Class<?>
+        getCanonicalName() : String
+        getDeclaredField() : Field
+        getName() : String
+        '   contien le package en plus
+        getDeclaredClass() : Class
+        getModifiers() : Integer
+
+    }
+
+    class String
+    {
+        compareTo() : Integer
+        contains() : Boolean
+        endWith() : Boolean
+        length() : Integer
+        split() : String[]
+        toString() : String
+    }
+
+    class Enum
+    {
+        compareTo() : Boolean
+        getDeclaringClass() : Classe<e>
+        name() : String
+    }
+
+    package reflect
+    {
+        Interface Member
+        {
+            getName() : String
+            getDeclaringClass() : Class<?>
+            getModifiers() : Interger
+        }
+
+        class AccessibleObject
+        {
+            'getAnnotations() : Annotation[*]
+            'getDeclaredAnnotations() : Annotation[*]
+        }
+
+        class Executable implements Member
+        {
+            'getDeclaredAnnotations() : Annotation[*]
+        }
+
+        class Constructor implements Member
+        {
+            getModifiers() : Integer
+            getName() : String
+            gerParameterTypes() : Class<?>[]
+        }
+
+        class Field implements Member
+        {
+            getModifiers() : Integer
+            getName() : String
+            toString() : String
+        }
+
+        class Method implements Member
+        {
+            getModifiers() : Integer
+            getName() : String
+        }
+    }
+}
+
+Class --|> Object
+String --|> Object
+Enum -|> Object
+
+AccessibleObject --|> Object
+Executable -|> AccessibleObject
+Field --|> AccessibleObject
+Constructor -|> Executable
+
+/'abstract class AbstractList
+abstract AbstractCollection
+interface List
+interface Collection
+
+List <|-- AbstractList
+Collection <|-- AbstractCollection
+
+Collection <|- List
+AbstractCollection <|- AbstractList
+AbstractList <|-- ArrayList
+
+class ArrayList {
+Object[] elementData
+size()
+}
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}'/
+
+@enduml
