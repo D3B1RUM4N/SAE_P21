@@ -1,0 +1,22 @@
+null@startuml
+
+'UML GENER PAR CODE :)
+
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+
+class semaineDeux{
+stringClass
+cName
+fichier
+main()
+classGet()
+umlClass()
+umlAtribute()
+umlMethode()
+ecriture()
+
+}
+@enduml

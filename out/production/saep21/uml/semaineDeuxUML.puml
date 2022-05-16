@@ -5,8 +5,11 @@ skinparam classFontStyle Bold
 hide empty members
 
 
-
+'generer par code
 class SemaineDeux{
+stringClass : String
+cName : Class
+fichier : String
 +main()
 +classGet()
 +umlClass()

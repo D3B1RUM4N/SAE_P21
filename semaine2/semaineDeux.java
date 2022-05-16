@@ -9,7 +9,7 @@ import static java.lang.System.lineSeparator;
 
 public class semaineDeux {
 
-    public static String stringClass;
+    public static String stringClass = "";
     public static Class cName;
     public static String fichier = "semaineDeux";
 
@@ -47,6 +47,9 @@ public class semaineDeux {
     {
         //creation d'une class pour l'uml
         stringClass += "@startuml" + lineSeparator() +
+                lineSeparator() +
+                "'UML GENER PAR CODE :)" + lineSeparator() +
+                lineSeparator() +
                 "skinparam style strictuml" + lineSeparator() +
                 "skinparam classAttributeIconSize 0" + lineSeparator() +
                 "skinparam classFontStyle Bold" + lineSeparator() +
@@ -93,7 +96,7 @@ public class semaineDeux {
 
     public static void ecriture()
     {
-        Path path = Paths.get("../../../fichierTXT/classUML.puml");
+        Path path = Paths.get("../../../semaine2/uml/classUML.puml");
         try {
             //String str = "Test creation \n Hello W0rld";
             byte[] bs = stringClass.getBytes();
