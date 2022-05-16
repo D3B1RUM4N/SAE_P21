@@ -5,6 +5,15 @@ skinparam classFontStyle Bold
 hide empty members
 
 class semaineDeux{
-[Ljava.lang.reflect.Field;@677327b6
+stringClass
+cName
+fichier
+main()
+classGet()
+umlClass()
+umlAtribute()
+umlMethode()
+ecriture()
+
 }
 @enduml

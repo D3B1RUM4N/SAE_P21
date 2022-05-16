@@ -1,0 +1,21 @@
+@startuml
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+
+
+
+class SemaineDeux{
+stringClass : String
+cName : Class
+fichier : String
++main()
++classGet()
++umlClass()
++umlMethode()
++ecriture()
++String stringClass()
++Class cName()
+}
+@enduml
