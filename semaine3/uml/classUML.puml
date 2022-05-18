@@ -18,7 +18,7 @@ class semaineTrois{
 +{static}umlAtribute() : 
 +{static}umlMethode() : 
 +{static}ecriture() : 
--{static}visibilité() : int 
+-{static}visibilité() : Integer 
 
 }
 @enduml

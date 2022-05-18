@@ -25,7 +25,7 @@ package java.lang
         '   contien le package en plus
         getDeclaredClass() : Class
         getModifiers() : Integer
-
+        getSimpleName() : String
     }
 
     class String
