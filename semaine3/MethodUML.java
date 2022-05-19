@@ -2,7 +2,7 @@ import java.lang.reflect.Method;
 
 import static java.lang.System.lineSeparator;
 
-public class GetMethod {
+public class MethodUML {
 
     public static void umlMethode()
     {

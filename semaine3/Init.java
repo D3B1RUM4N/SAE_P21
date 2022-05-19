@@ -1,3 +1,4 @@
+import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -7,7 +8,6 @@ import static java.lang.System.lineSeparator;
 
 public class Init {
     public static String stringClass = "";
-    public static Class cName;
     public static String fichier = "semaineDeux";
 
     public static void debutEcriture()
@@ -24,12 +24,26 @@ public class Init {
                 lineSeparator();
 
         //recuperation de la class
-        GetClass.classGet();
-        GetClass.umlClass();
+        ClassUML classUML = new ClassUML();
+        Class cName = classUML.classGet(fichier);
+        stringClass += "class " + classUML.name(cName) + "{" + lineSeparator();
 
-        GetField.umlAtribute();
+        FieldUML fieldUML = new FieldUML();
+        try {
+            Field[] attribut = cName.getDeclaredFields();
+            for (Field val : attribut) {
+                int mod = val.getModifiers();
+                stringClass += fieldUML.visibilite(mod);
+                stringClass += fieldUML.name(val);
+                fieldUML.type(mod);
+            }
+        } catch (Exception e) {
+                throw new RuntimeException(e);
+        }
 
-        GetMethod.umlMethode();
+
+
+        MethodUML.umlMethode();
 
         //fermeture de la class
         stringClass += lineSeparator() +
@@ -38,6 +52,8 @@ public class Init {
 
         ecriture();
     }
+
+
 
     private static void ecriture()
     {
