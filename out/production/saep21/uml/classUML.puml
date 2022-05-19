@@ -8,17 +8,17 @@ skinparam classFontStyle Bold
 hide empty members
 
 class semaineTrois{
-+{static}stringClass
-+{static}cName
-+{static}fichier
-+{static}main() : String[] 
-+{static}type() : Method 
-+{static}classGet() : 
-+{static}umlClass() : 
-+{static}umlAtribute() : 
-+{static}umlMethode() : 
-+{static}ecriture() : 
--{static}visibilité() : int 
++{static}stringClass: String
++{static}cName: Class
++{static}fichier: String
++{static}main(): String[] 
++{static}type(): Method 
++{static}classGet()
++{static}umlClass()
++{static}umlAtribute()
++{static}umlMethode()
++{static}ecriture()
+-{static}visibilité(): Integer 
 
 }
 @enduml

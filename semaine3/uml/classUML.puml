@@ -7,18 +7,16 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class semaineTrois{
-+{static}stringClass
-+{static}cName
-+{static}fichier
-+{static}main() : String[] 
-+{static}type() : Method 
-+{static}classGet() : 
-+{static}umlClass() : 
-+{static}umlAtribute() : 
-+{static}umlMethode() : 
-+{static}ecriture() : 
--{static}visibilité() : Integer 
+class semaineDeux{
++{static}stringClass: String
++{static}cName: Class
++{static}fichier: String
++{static}main(): String[] 
++{static}classGet()
++{static}umlClass()
++{static}umlAtribute()
++{static}umlMethode()
++{static}ecriture()
 
 }
 @enduml
