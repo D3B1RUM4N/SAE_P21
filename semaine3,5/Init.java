@@ -25,9 +25,40 @@ public class Init {
         //recup de la class
         ClassUML classUML = new ClassUML();
         try {
-            classUML.classGet(Class.forName(fichier));
+            stringClass += classUML.classGet(Class.forName(fichier));
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
+        }
+
+        ecriturePUML();
+        ecritureSVG();
+    }
+
+    public static void ecriturePUML()
+    {
+        Path path = Paths.get("../../../semaine3,5/uml/classUML.puml");
+        try {
+            //String str = "Test creation \n Hello W0rld";
+            byte[] bs = stringClass.getBytes();
+            Path writtenFilePath = Files.write(path, bs);
+            System.out.println("Written content in file:\n"+ new String(Files.readAllBytes(writtenFilePath)));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void ecritureSVG()
+    {
+        Path path = Paths.get("../../../semaine3,5/uml/classUML.svg");
+        try {
+            //String str = "Test creation \n Hello W0rld";
+            byte[] bs = stringClass.getBytes();
+            Path writtenFilePath = Files.write(path, bs);
+            System.out.println("Written content in file:\n"+ new String(Files.readAllBytes(writtenFilePath)));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

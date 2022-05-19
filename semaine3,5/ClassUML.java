@@ -1,4 +1,5 @@
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import static java.lang.System.lineSeparator;
 
@@ -8,26 +9,45 @@ public class ClassUML {
     private static String uml = "";
 
 
-    public void classGet(Class c) {
+    public String classGet(Class c) {
 
         //lecture de la class
         cName = c;
         uml += "class " + cName.getName() + "{" + lineSeparator();
 
-        FieldUML fieldUML = new FieldUML();
 
+        /******* POUR LES ATTRIBUTS *******/
+        FieldUML fieldUML = new FieldUML();
         try {
             Field[] attribut = cName.getDeclaredFields();
             for(Field val : attribut)
             {
-                //visibilité
-                uml += fieldUML.visibilite(val);
+                //info sur les attribut
+                uml += fieldUML.traitementField(val);
             }
         }
         catch (Exception e) {
             throw new RuntimeException(e);
         }
-        //System.out.println("La classe de l'objet obj est : " + c.getName())
+
+        /******* POUR LES METHODES *******/
+        MethodUML methodUML = new MethodUML();
+        try {
+            Method[] methode = cName.getDeclaredMethods();
+            for(Method val : methode)
+            {
+                uml += methodUML.traitementMethod(val);
+            }
+
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
+        /******* FERMETURE DE LA CLASS *******/
+        uml += lineSeparator() +
+                "}" + lineSeparator() +
+                "@enduml";
+        return uml;
     }
 }
 
