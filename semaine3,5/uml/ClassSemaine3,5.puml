@@ -1,0 +1,72 @@
+@startuml
+
+
+skinparam style strictuml
+skinparam classAttributeIconSize 0
+skinparam classFontStyle Bold
+hide empty members
+/'
+class Getclass{
++{static}classGet()
++{static}umlClass()
+}
+
+class GetField{
++{static}umlAtribute()
+}
+
+class GetMethod{
++{static}umlMethode()
++{static}type(Method) : String
+}
+
+class init{
++{static}debutEcriture()
++{static}ecriture()
++{static}visibilité(int) : String
+}
+
+class Main{
++{static}main()
+
+}'/
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(Class): String
+}
+
+class FieldUML {
+-{static}fVal: Field
+-name()
+-type()
++traitementField(Field): String
+-visibilite(Integer): String
+}
+
+class Init{
++{static}stringClass(String)
++{static}fichier: String
++{static}debutEcriture()
++{static}ecriturePUML()
++{static}ecritureSVG()
+}
+
+class Main{
++{static}main(String[]):
+}
+
+class MethodUML{
+-{static}methode: Method
+-name():String
+-type(): String
++traitementMethod(method): String
+-visibilite(Integer): String
+}
+
+ClassUML -> FieldUML : appel et récupére l'attribut d'une fonction de la class
+ClassUML -> MethodUML :  récupére les méthodes et attribut de la class
+Init -> ClassUML : récupération class
+Main -> Init : appel la class
+@enduml

@@ -8,7 +8,7 @@ import static java.lang.System.lineSeparator;
 
 public class Init {
     public static String stringClass = "";
-    public static String fichier = "semaineDeux";
+    public static String fichier = "MethodUML";
 
     public static void debutEcriture() throws ClassNotFoundException {
         // debut de l'UML

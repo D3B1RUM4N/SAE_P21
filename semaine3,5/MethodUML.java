@@ -11,7 +11,7 @@ public class MethodUML {
         methode = met;
         int mod = methode.getModifiers();
 
-        return visibilite(mod) + name() + "()" + type() + lineSeparator();
+        return visibilite(mod) + name() + "("+type()+")"+ lineSeparator();
     }
 
     private String visibilite(int mod)

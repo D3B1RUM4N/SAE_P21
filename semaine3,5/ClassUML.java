@@ -23,7 +23,7 @@ public class ClassUML {
             for(Field val : attribut)
             {
                 //info sur les attribut
-                uml += fieldUML.traitementField(val);
+                uml += fieldUML.traitementField(val) + lineSeparator();
             }
         }
         catch (Exception e) {
@@ -36,7 +36,7 @@ public class ClassUML {
             Method[] methode = cName.getDeclaredMethods();
             for(Method val : methode)
             {
-                uml += methodUML.traitementMethod(val);
+                uml += methodUML.traitementMethod(val) + lineSeparator();
             }
 
         }catch (Exception e) {
