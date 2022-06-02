@@ -7,67 +7,16 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-
-
-class ClassUML{
--{static}cName: Class
--{static}uml: String
-+classGet(: Class )
-
-
-}
-
-
-class ClassUML{
--{static}cName: Class
--{static}uml: String
-+classGet(: Class )
-
-
-}
-class Init{
-+{static}stringClass: String
-+{static}fichier: String
-+{static}fichiers: String[]
-+{static}debutEcriture()
-
-+{static}ecriturePUML()
-
-+{static}ecritureSVG()
-
-
-}
-
-
-class ClassUML{
--{static}cName: Class
--{static}uml: String
-+classGet(: Class )
-
-
-}
-class Init{
-+{static}stringClass: String
-+{static}fichier: String
-+{static}fichiers: String[]
-+{static}debutEcriture()
-
-+{static}ecriturePUML()
-
-+{static}ecritureSVG()
-
-
-}
-class FieldUML{
--{static}fVal: Field
--name()
-
--type()
-
-+traitementField(: Field )
-
--visibilite(: Integer )
-
+class semaineDeux{
+stringClass
+cName
+fichier
+main()
+classGet()
+umlClass()
+umlAtribute()
+umlMethode()
+ecriture()
 
 }
 @enduml
