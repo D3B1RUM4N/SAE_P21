@@ -7,13 +7,64 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class MethodUML{
--{static}methode: Method
+
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(: Class )
+
+
+}
+@enduml
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(: Class )
+
+
+}
+@endumlclass Init{
++{static}stringClass: String
++{static}fichier: String
++{static}fichiers: String[]
++{static}debutEcriture()
+
++{static}ecriturePUML()
+
++{static}ecritureSVG()
+
+
+}
+@enduml
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(: Class )
+
+
+}
+@endumlclass Init{
++{static}stringClass: String
++{static}fichier: String
++{static}fichiers: String[]
++{static}debutEcriture()
+
++{static}ecriturePUML()
+
++{static}ecritureSVG()
+
+
+}
+@endumlclass FieldUML{
+-{static}fVal: Field
 -name()
 
 -type()
 
-+traitementMethod(: Method )
++traitementField(: Field )
 
 -visibilite(: Integer )
 

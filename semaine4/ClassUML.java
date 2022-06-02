@@ -55,8 +55,7 @@ public class ClassUML {
 
         /******* FERMETURE DE LA CLASS *******/
         uml += lineSeparator() +
-                "}" + lineSeparator() +
-                "@enduml";
+                "}" + lineSeparator();
         return uml;
     }
 }

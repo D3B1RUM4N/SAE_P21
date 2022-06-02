@@ -7,12 +7,54 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-interface ClassUML{
+
+
+class ClassUML{
 -{static}cName: Class
 -{static}uml: String
-+classGet(c: Class ): String
-
++classGet(: Class )
 
 }
-'fin du code generé automatiquement
+
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(: Class )
+
+}
+class Init{
++{static}stringClass: String
++{static}fichier: String
++{static}fichiers: String[]
++{static}debutEcriture()
++{static}ecriturePUML()
++{static}ecritureSVG()
+
+}
+
+
+class ClassUML{
+-{static}cName: Class
+-{static}uml: String
++classGet(: Class )
+
+}
+class Init{
++{static}stringClass: String
++{static}fichier: String
++{static}fichiers: String[]
++{static}debutEcriture()
++{static}ecriturePUML()
++{static}ecritureSVG()
+
+}
+class FieldUML{
+-{static}fVal: Field
+-name()
+-type()
++traitementField(: Field )
+-visibilite(: Integer )
+
+}
 @enduml

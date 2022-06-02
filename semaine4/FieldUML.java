@@ -17,7 +17,7 @@ public class FieldUML {
     private String visibilite(int mod)
     {
         String res ="";
-
+        /*
         if(Modifier.toString(mod).contains("public"))
         {
             res +="+";
@@ -30,6 +30,21 @@ public class FieldUML {
         {
             res += "{static}";
         }
+         */
+
+        if(Modifier.isPublic(mod))
+        {
+            res+="+";
+        } else if (Modifier.isPrivate(mod)) {
+            res+="-";
+        }
+
+        if(Modifier.isStatic(mod)) {
+            res +="{static}";
+        } else if (Modifier.isAbstract(mod)) {
+            res += "{abstract}";
+        }
+
         return res;
     }
 

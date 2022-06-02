@@ -8,7 +8,8 @@ import static java.lang.System.lineSeparator;
 
 public class Init {
     public static String stringClass = "";
-    public static String fichier = "MethodUML";
+    public static String fichier = "Year/";
+    public static String[] fichiers = {"ClassUML", "Init", "FieldUML"};
 
     public static void debutEcriture() throws ClassNotFoundException {
         // debut de l'UML
@@ -23,12 +24,21 @@ public class Init {
                 lineSeparator();
 
         //recup de la class
-        ClassUML classUML = new ClassUML();
-        try {
-            stringClass += classUML.classGet(Class.forName(fichier));
-        } catch (ClassNotFoundException e) {
-            throw new RuntimeException(e);
+        for(String val : fichiers)
+        {
+            stringClass += lineSeparator() +
+                    lineSeparator();
+            ClassUML classUML = new ClassUML();
+            try {
+                stringClass += classUML.classGet(Class.forName(val));
+            } catch (ClassNotFoundException e) {
+                throw new RuntimeException(e);
+            }
         }
+
+        /****** Fin de l'UML ******/
+        stringClass += "@enduml" + lineSeparator();
+
 
         ecriturePUML();
         ecritureSVG();
@@ -36,7 +46,7 @@ public class Init {
 
     public static void ecriturePUML()
     {
-        Path path = Paths.get("../../../semaine3,5/uml/classUML.puml");
+        Path path = Paths.get("../../../semaine4/uml/classUML.puml");
         try {
             //String str = "Test creation \n Hello W0rld";
             byte[] bs = stringClass.getBytes();
