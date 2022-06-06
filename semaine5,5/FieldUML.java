@@ -1,23 +1,23 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
-import static java.lang.System.lineSeparator;
-
 public class FieldUML {
-    private static Field fVal;
+    public FieldUML() {}
 
-    public String traitementField(Field f)
+    private Field field;
+    int mod;
+
+    public String lectureField(Field fVal)
     {
-        fVal = f;
-        int mod = fVal.getModifiers();
+        field = fVal;
+        mod = fVal.getModifiers();
 
-        return visibilite(mod) + name() + type();
+        return visibilite() + name() + type();
     }
 
-    private String visibilite(int mod)
+    private String visibilite()
     {
         String res ="";
-
 
         if(Modifier.isPublic(mod))
         {
@@ -37,13 +37,13 @@ public class FieldUML {
 
     private String name()
     {
-        return fVal.getName();
+        return field.getName();
     }
-
 
     private String type()
     {
-        return ": " + fVal.getType().getSimpleName();
+        return ": " + field.getType().getSimpleName();
     }
+
 
 }

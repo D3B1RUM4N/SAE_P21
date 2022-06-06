@@ -1,5 +1,6 @@
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
+import java.lang.reflect.Parameter;
 
 import static java.lang.System.lineSeparator;
 
@@ -13,6 +14,7 @@ public class MethodUML {
     {
         methode = met;
         int mod = methode.getModifiers();
+        //declarer mod en global
 
         return visibilite(mod) + name() + "("+type()+")";
     }
@@ -38,14 +40,24 @@ public class MethodUML {
 
     private String name()
     {
+        System.out.println("/////////////////////"+methode.getName());
         return methode.getName();
     }
 
     private String type()
     {
         String res ="";
-        Class[] parameters = methode.getParameterTypes();
-        for(Class val : parameters)
+
+        Parameter[] parametersName = methode.getParameters();
+        for(Parameter val : parametersName)
+        {
+
+        }
+        System.out.println("/////////////////////////" );
+
+        Class[] parametersType = methode.getParameterTypes();
+        ClassUML getClass = new ClassUML();
+        for(Class val : parametersType)
         {
             if(val.getSimpleName().contains("int"))
             {
@@ -55,6 +67,7 @@ public class MethodUML {
             {
                 res += ": " + val.getSimpleName() + " ";
             }
+            return res;
         }
         //System.out.println("//////////////////////" + res);
         return res;

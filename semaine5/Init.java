@@ -48,7 +48,7 @@ public class Init {
 
     public static void ecriturePUML()
     {
-        Path path = Paths.get("../../../semaine4/uml/classUML.puml");
+        Path path = Paths.get("../../../semaine5/uml/classUML.puml");
         try {
             //String str = "Test creation \n Hello W0rld";
             byte[] bs = stringClass.getBytes();

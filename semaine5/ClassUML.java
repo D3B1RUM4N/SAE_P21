@@ -6,8 +6,12 @@ import static java.lang.System.lineSeparator;
 public class ClassUML {
     //public static Class cName;
     private static Class cName;
-    private static String uml = "";
+    private String uml = "";
 
+    public ClassUML()
+    {
+
+    }
 
     public String classGet(Class c) {
 
@@ -58,5 +62,8 @@ public class ClassUML {
                 "}" + lineSeparator();
         return uml;
     }
+
+
+
 }
 
