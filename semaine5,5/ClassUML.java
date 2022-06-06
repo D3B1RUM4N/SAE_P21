@@ -1,4 +1,6 @@
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 import static java.lang.System.lineSeparator;
 
@@ -26,6 +28,8 @@ public class ClassUML {
             toUML += "class " + cName.getName() + "{" + lineSeparator();
         }
 
+
+
         /******* Attribut ******/
         FieldUML field = new FieldUML();
         try {
@@ -37,6 +41,20 @@ public class ClassUML {
             }
         }
         catch (Exception e) {
+            System.out.println("erreure a Attribut");
+            throw new RuntimeException(e);
+        }
+
+        /****** POUR LES CONSTRUCRTEUR ******/
+        ConstructorUML constructeurUML = new ConstructorUML();
+        try {
+            Constructor[] constructeur = cName.getDeclaredConstructors();
+            for(Constructor val : constructeur)
+            {
+                toUML += constructeurUML.lectureConstructor(val);
+            }
+        } catch (Exception e) {
+            System.out.println("erreure a Constructeur");
             throw new RuntimeException(e);
         }
 
@@ -50,6 +68,7 @@ public class ClassUML {
             }
 
         }catch (Exception e) {
+            System.out.println("erreure a Methode");
             throw new RuntimeException(e);
         }
 

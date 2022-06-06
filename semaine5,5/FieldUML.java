@@ -5,35 +5,16 @@ public class FieldUML {
     public FieldUML() {}
 
     private Field field;
-    int mod;
+    private int mod;
 
     public String lectureField(Field fVal)
     {
         field = fVal;
         mod = fVal.getModifiers();
-
-        return visibilite() + name() + type();
+        ModifierUML modifieur = new ModifierUML();
+        return modifieur.visibilite(mod) + name() + type();
     }
 
-    private String visibilite()
-    {
-        String res ="";
-
-        if(Modifier.isPublic(mod))
-        {
-            res+="+";
-        } else if (Modifier.isPrivate(mod)) {
-            res+="-";
-        }
-
-        if(Modifier.isStatic(mod)) {
-            res +="{static}";
-        } else if (Modifier.isAbstract(mod)) {
-            res += "{abstract}";
-        }
-
-        return res;
-    }
 
     private String name()
     {

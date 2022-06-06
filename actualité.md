@@ -9,3 +9,7 @@ Actualité semaine 3 :
 - dans semaine3,5 se trouve ./uml/classUML.puml; c'est le puml generer par code.
     XXX.puml est le puml de notre code
 - nous avons essayé de generer notre code .puml avec un .svg mais cela n'a rien donné de fonctionnel.
+
+Actualité semaine 5 :
+- du au faite que l'on a du tout reecrire, nous avons preferer de continuer sur un nouveau repertoir
+    plutot que de tout reecrire sans etre sur du fonctionnement. donc la suite est sur semaine5,5

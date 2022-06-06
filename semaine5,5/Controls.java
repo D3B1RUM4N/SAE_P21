@@ -33,6 +33,11 @@ public class Controls {
 
         /******* Fin ecriture *******/
         stringClass += write.finEcriture();
+
+        ToUML print = new ToUML();
+        print.ecriturePUML(stringClass);
+
+        System.out.println(stringClass);
     }
     
 }

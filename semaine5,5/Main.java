@@ -1,5 +1,6 @@
 public class Main {
-    public void Main(String[] args)
+
+    public static void main(String[] args)
     {
         if(args[0] != null)
         {

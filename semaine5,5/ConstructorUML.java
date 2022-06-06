@@ -1,34 +1,27 @@
-import java.lang.reflect.Method;
-import java.lang.reflect.Modifier;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Parameter;
 
-public class MethodUML {
+import static java.lang.System.lineSeparator;
 
-    public MethodUML() {}
+public class ConstructorUML {
+    public ConstructorUML() {}
 
-    private Method methode;
-    private int mod;
+    private Constructor constructeur;
 
-    public String traitementMethod(Method met)
+    public String lectureConstructor(Constructor cons)
     {
-        methode = met;
-        mod = methode.getModifiers();
-        //declarer mod en global
+        constructeur = cons;
+        //System.out.println("/////////////" + constructeur.getName().toString());
         ModifierUML modifieur = new ModifierUML();
-        return modifieur.visibilite(mod) + name() + "("+type()+")";
-    }
-
-    private String name()
-    {
-        //System.out.println("///////////////////// nom param 2"+methode.getName());
-        return methode.getName();
+        int mod = constructeur.getModifiers();
+        return modifieur.visibilite(mod) + "<<create>>" + constructeur.getName().toString() + "("+type()+")" + lineSeparator();
     }
 
     private String type()
     {
         String res ="";
 
-        Parameter[] parametersName = methode.getParameters();
+        Parameter[] parametersName = constructeur.getParameters();
         for(Parameter val : parametersName)
         {
             //System.out.println("///////////////// nom param : " + val.getName());
@@ -36,7 +29,7 @@ public class MethodUML {
         }
         //System.out.println("/////////////////////////" );
 
-        Class[] parametersType = methode.getParameterTypes();
+        Class[] parametersType = constructeur.getParameterTypes();
         ClassUML getClass = new ClassUML();
         for(Class val : parametersType)
         {
@@ -54,4 +47,5 @@ public class MethodUML {
         return res;
 
     }
+
 }

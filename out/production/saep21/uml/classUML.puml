@@ -1,18 +1,18 @@
 @startuml
 
-'UML GENER PAR CODE :)
+'UML GENERE PAR CODE :)
 
 skinparam style strictuml
 skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class MethodUML{
--{static}methode: Method
--name()
+class FieldUML{
+-field: Field
+-mod: int
++<<create>>FieldUML-name()
 -type()
-+traitementMethod(: Method )
--visibilite(: Integer )
++lectureField(fVal: Field )
 
 }
 @enduml
