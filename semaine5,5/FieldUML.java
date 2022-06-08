@@ -13,6 +13,7 @@ public class FieldUML {
         mod = fVal.getModifiers();
         ModifierUML modifieur = new ModifierUML();
         return modifieur.visibilite(mod) + name() + type() + modifieur.access();
+
     }
 
 

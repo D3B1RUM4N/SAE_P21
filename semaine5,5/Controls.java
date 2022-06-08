@@ -13,14 +13,12 @@ public class Controls {
     private String stringClass = "";
 
     public Controls() {    }
-    
-    public void controls(String arg)
+
+    public String controls(String arg)
     {
         fichier = arg;
 
-        Ecriture write = new Ecriture();
-        /******* Debut ecriture *******/
-        stringClass += write.debutEcriture();
+
 
         /******* Traitement Class *******/
         ClassUML classe = new ClassUML();
@@ -31,13 +29,7 @@ public class Controls {
         }
 
 
-        /******* Fin ecriture *******/
-        stringClass += write.finEcriture();
-
-        ToUML print = new ToUML();
-        print.ecriturePUML(stringClass);
-
-        System.out.println(stringClass);
+        return stringClass;
     }
     
 }
