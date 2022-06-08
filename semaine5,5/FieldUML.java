@@ -12,7 +12,7 @@ public class FieldUML {
         field = fVal;
         mod = fVal.getModifiers();
         ModifierUML modifieur = new ModifierUML();
-        return modifieur.visibilite(mod) + name() + type();
+        return modifieur.visibilite(mod) + name() + type() + modifieur.access();
     }
 
 

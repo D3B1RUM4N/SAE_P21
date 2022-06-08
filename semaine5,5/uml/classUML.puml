@@ -7,13 +7,63 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class FieldUML{
--field: Field
--mod: int
-+<<create>>FieldUML()
--name()
--type()
-+lectureField(fVal: Field )
+class java.time.Year{
++{static}MIN_VALUE: int{readOnly}
++{static}MAX_VALUE: int{readOnly}
+-{static}serialVersionUID: long{readOnly}
+-{static}PARSER: DateTimeFormatter{readOnly}
+-year: int{readOnly}
+-<<create>>java.time.Year(arg0: Integer )
++get(arg0: TemporalField ): Integer
++equals(arg0: Object ): boolean
++length(): Integer
++toString(): String
++hashCode(): Integer
++compareTo(arg0: Object ): Integer
++compareTo(arg0: Year ): Integer
++getLong(arg0: TemporalField ): long
++getValue(): Integer
++format(arg0: DateTimeFormatter ): String
++{static}of(arg0: Integer ): Year
++{static}from(arg0: TemporalAccessor ): Year
+-readObject(arg0: ObjectInputStream )
++query(arg0: TemporalQuery ): Object
+-writeReplace(): Object
++isSupported(arg0: TemporalField ): boolean
++isSupported(arg0: TemporalUnit ): boolean
++range(arg0: TemporalField ): ValueRange
++{static}parse(arg0: CharSequence ): Year
++{static}parse(arg0arg1: CharSequence ): Year
++{static}now(arg0: ZoneId ): Year
++{static}now(arg0: Clock ): Year
++{static}now(): Year
++adjustInto(arg0: Temporal ): Temporal
++with(arg0: TemporalAdjuster ): Year
++with(arg0arg1: TemporalField ): Temporal
++with(arg0: TemporalAdjuster ): Temporal
++with(arg0arg1: TemporalField ): Year
++plus(arg0arg1: long ): Temporal
++plus(arg0: TemporalAmount ): Year
++plus(arg0arg1: long ): Year
++plus(arg0: TemporalAmount ): Temporal
++until(arg0arg1: Temporal ): long
++minus(arg0arg1: long ): Year
++minus(arg0: TemporalAmount ): Year
++minus(arg0: TemporalAmount ): Temporal
++minus(arg0arg1: long ): Temporal
+writeExternal(arg0: DataOutput )
+{static}readExternal(arg0: DataInput ): Year
++minusYears(arg0: long ): Year
++isLeap(): boolean
++{static}isLeap(arg0: long ): boolean
++plusYears(arg0: long ): Year
++isAfter(arg0: Year ): boolean
++isBefore(arg0: Year ): boolean
++isValidMonthDay(arg0: MonthDay ): boolean
++atDay(arg0: Integer ): LocalDate
++atMonth(arg0: Integer ): YearMonth
++atMonth(arg0: Month ): YearMonth
++atMonthDay(arg0: MonthDay ): LocalDate
 
 }
 @enduml

@@ -15,8 +15,8 @@ public class ClassUML {
         cName = c;
 
         /******* Package ******/
-        Package p = c.getPackage();
-        toUML+= p.getName();
+        //Package p = c.getPackage();
+        //toUML+= p.getName();
 
         /******* Type d'Objet ******/
         if(cName.isInterface())

@@ -25,4 +25,14 @@ public class ModifierUML {
 
         return res;
     }
+
+    public String access()
+    {
+        if(Modifier.isFinal(mod))
+        {
+            System.out.println("////////{readOnly}");
+            return "{readOnly}";
+        }
+        return "";
+    }
 }

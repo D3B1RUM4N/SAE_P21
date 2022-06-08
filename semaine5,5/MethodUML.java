@@ -15,7 +15,7 @@ public class MethodUML {
         mod = methode.getModifiers();
         //declarer mod en global
         ModifierUML modifieur = new ModifierUML();
-        return modifieur.visibilite(mod) + name() + "("+type()+")";
+        return modifieur.visibilite(mod) + name() + "("+type()+")" + returnType();
     }
 
     private String name()
@@ -54,4 +54,25 @@ public class MethodUML {
         return res;
 
     }
+
+    private String returnType() {
+        //System.out.println("/////" + methode.getReturnType().getSimpleName());
+        String val = methode.getReturnType().getSimpleName();
+        if (val.contains("void")) {
+            return "";
+        } else if (val.contains("String")) {
+            return ": String";
+        } else if (val.contains("int")) {
+            return ": Integer";
+        } else {
+            return ": " + val;
+        }
+    }
+
+        //System.out.println("////////////" + methode.getName());
+        //System.out.println("///" + methode.getReturnType().getTypeName());
+
+
+
+
 }

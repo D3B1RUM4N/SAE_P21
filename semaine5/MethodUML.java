@@ -8,7 +8,7 @@ import static java.lang.System.lineSeparator;
 
 public class MethodUML {
 
-    private static Method methode;
+    private static Method  methode;
 
     public String traitementMethod(Method met)
     {

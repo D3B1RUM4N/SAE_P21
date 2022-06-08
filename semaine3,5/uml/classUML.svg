@@ -7,12 +7,62 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class MethodUML{
--{static}methode: Method
--name()
--type()
-+traitementMethod(: Method )
--visibilite(: Integer )
+java.timeclass java.time.Year{
++{static}MIN_VALUE: int
++{static}MAX_VALUE: int
+-{static}serialVersionUID: long
+-{static}PARSER: DateTimeFormatter
+-year: int
++get(: TemporalField )
++equals(: Object )
++length()
++toString()
++hashCode()
++compareTo(: Object )
++compareTo(: Year )
++getLong(: TemporalField )
++getValue()
++format(: DateTimeFormatter )
++{static}of(: Integer )
++{static}from(: TemporalAccessor )
+-readObject(: ObjectInputStream )
++query(: TemporalQuery )
+-writeReplace()
++isSupported(: TemporalField )
++isSupported(: TemporalUnit )
++range(: TemporalField )
++{static}parse(: CharSequence )
++{static}parse(: CharSequence )
++{static}now(: ZoneId )
++{static}now(: Clock )
++{static}now()
++adjustInto(: Temporal )
++with(: TemporalAdjuster )
++with(: TemporalField )
++with(: TemporalAdjuster )
++with(: TemporalField )
++plus(: long )
++plus(: TemporalAmount )
++plus(: long )
++plus(: TemporalAmount )
++until(: Temporal )
++minus(: long )
++minus(: TemporalAmount )
++minus(: TemporalAmount )
++minus(: long )
+writeExternal(: DataOutput )
+{static}readExternal(: DataInput )
++minusYears(: long )
++isLeap()
++{static}isLeap(: long )
++plusYears(: long )
++isAfter(: Year )
++isBefore(: Year )
++isValidMonthDay(: MonthDay )
++atDay(: Integer )
++atMonth(: Integer )
++atMonth(: Month )
++atMonthDay(: MonthDay )
 
 }
 @enduml
