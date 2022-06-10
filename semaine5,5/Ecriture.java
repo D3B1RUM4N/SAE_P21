@@ -2,12 +2,11 @@ import static java.lang.System.lineSeparator;
 
 public class Ecriture {
 
-    private String ecriture = "";
     public Ecriture() {    }
 
     public String debutEcriture()
     {
-        ecriture += "@startuml" + lineSeparator() +
+        String ecriture = "@startuml" + lineSeparator() +
                 lineSeparator() +
                 "'UML GENERE PAR CODE :)" + lineSeparator() +
                 lineSeparator() +

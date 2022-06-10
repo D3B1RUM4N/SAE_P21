@@ -5,11 +5,11 @@ import java.nio.file.Paths;
 public class ToUML {
 
     public ToUML() {}
-    private String stringVal = "";
+
 
     public void ecriturePUML(String val)
     {
-        stringVal = val;
+        String stringVal = val;
         Path path = Paths.get("../../../semaine5,5/uml/classUML.puml");
         try {
             //String str = "Test creation \n Hello W0rld";
