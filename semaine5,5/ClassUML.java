@@ -7,12 +7,11 @@ import static java.lang.System.lineSeparator;
 public class ClassUML {
 
     public ClassUML() {}
-    private Class cName;
-    private String toUML = "";
 
-    public String lectureClass(Class c)
+
+    public String lectureClass(Class cName)
     {
-        cName = c;
+        String toUML = "";
 
         /******* Package ******/
         //Package p = c.getPackage();
@@ -22,7 +21,7 @@ public class ClassUML {
         if(cName.isInterface())
         {
             toUML += "interface " + cName.getName() + "{" + lineSeparator();
-        } else if (c.isEnum()) {
+        } else if (cName.isEnum()) {
             toUML += "enumeration " + cName.getName() + "{" + lineSeparator();
         } else {
             toUML += "class " + cName.getName() + "{" + lineSeparator();
@@ -71,6 +70,9 @@ public class ClassUML {
             System.out.println("erreure a Methode");
             throw new RuntimeException(e);
         }
+
+        toUML += lineSeparator() +
+                "}" + lineSeparator();
 
         return toUML;
     }

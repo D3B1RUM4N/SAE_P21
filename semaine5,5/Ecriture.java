@@ -22,7 +22,6 @@ public class Ecriture {
     public String finEcriture()
     {
         return lineSeparator() +
-                "}" + lineSeparator() +
                 "@enduml" + lineSeparator();
     }
 
