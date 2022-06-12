@@ -22,6 +22,9 @@ public class ModifierUML {
         } else if (Modifier.isAbstract(mod)) {
             res += "{abstract}";
         }
+        else if(Modifier.isProtected(mod)) {
+        res += "{protected}";
+        }
 
         return res;
     }

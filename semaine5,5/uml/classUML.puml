@@ -7,16 +7,9 @@ skinparam classAttributeIconSize 0
 skinparam classFontStyle Bold
 hide empty members
 
-class ClassUML{
-+<<create>>ClassUML()
-+lectureClass(cName: Class ): String
-
-}
-class ConstructorUML{
--constructeur: Constructor
-+<<create>>ConstructorUML()
--type(): String
-+lectureConstructor(cons: Constructor ): String
+class Main{
++<<create>>Main()
++{static}main(args: String[] )
 
 }
 class Controls{
@@ -24,11 +17,9 @@ class Controls{
 +controls(fichier: String ): String
 
 }
-class Ecriture{
--ecriture: String
-+<<create>>Ecriture()
-+debutEcriture(): String
-+finEcriture(): String
+class ClassUML{
++<<create>>ClassUML()
++lectureClass(cName: Class ): String
 
 }
 class FieldUML{
@@ -38,11 +29,6 @@ class FieldUML{
 -name(): String
 -type(): String
 +lectureField(fVal: Field ): String
-
-}
-class Main{
-+<<create>>Main()
-+{static}main(args: String[] )
 
 }
 class MethodUML{
@@ -60,12 +46,6 @@ mod: int
 +<<create>>ModifierUML()
 +access(): String
 +visibilite(val: Integer ): String
-
-}
-class ToUML{
--stringVal: String
-+<<create>>ToUML()
-+ecriturePUML(val: String )
 
 }
 
